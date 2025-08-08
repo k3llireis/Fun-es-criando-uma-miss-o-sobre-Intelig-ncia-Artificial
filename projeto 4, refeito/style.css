@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@600&family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Orbitron:wght@600&family=Monoton&family=Bebas+Neue&display=swap');
+
+:root {
+    --gojo-azul: #00C2FF;
+    --sukuna-vermelho: #9B0F1D;
+    --maldi-roxo: #e20f0f;
+    --fundo-escuro: #0b154b;
+    --texto-claro: #F1F1F1;
+    --fonte-titulo: 'Unbounded', sans-serif;
+    --fonte-texto: 'Rajdhani', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: conic-gradient(from 220deg at center, #0b154b, #1f1f2a, #070712, #e20f0f, #0b154b);
+    background-size: 300% 300%;
+    animation: fundoEnergetico 8s ease infinite;
+    color: var(--texto-claro);
+    font-family: var(--fonte-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    backdrop-filter: blur(2px);
+}
+
+@keyframes fundoEnergetico {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+.caixa-principal {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--maldi-roxo);
+    box-shadow: 0 0 25px var(--maldi-roxo);
+    border-radius: 14px;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.caixa-principal {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 4px solid var(--maldi-roxo);
+    animation: bordaExplosiva 4s ease-in-out infinite alternate;
+    box-shadow:
+        0 0 40px var(--maldi-roxo),
+        0 0 80px var(--maldi-roxo),
+        0 0 160px var(--maldi-roxo),
+        inset 0 0 20px var(--maldi-roxo),
+        inset 0 0 40px var(--maldi-roxo);
+    border-radius: 20px;
+    padding: 30px;
+    width: 95%;
+    max-width: 750px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+@keyframes brilharTitulo {
+    0% {
+        text-shadow: 0 0 8px var(--gojo-azul), 0 0 12px var(--gojo-azul);
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 20px var(--gojo-azul), 0 0 35px var(--gojo-azul);
+        transform: scale(1.03);
+    }
+}
+
+.caixa-perguntas {
+    font-size: 1.5rem;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--sukuna-vermelho);
+    color: var(--texto-claro);
+    font-family: var(--fonte-texto);
+    border: none;
+    border-radius: 10px;
+    padding: 18px 32px;
+    margin: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 14px var(--sukuna-vermelho);
+}
+
+button:hover {
+    background-color: var(--gojo-azul);
+    color: var(--fundo-escuro);
+    transform: scale(1.08);
+}
+
+.texto-resultado {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    line-height: 1.6;
+    color: var(--texto-claro);
+    text-shadow: 0 0 6px var(--texto-claro);
+}
+
+.caixa-principal {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--maldi-roxo);
+    animation: bordaAlternada 8s ease infinite;
+    box-shadow: 0 0 25px var(--maldi-roxo);
+    border-radius: 14px;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;.caixa-principal h1 {
+        font-family: var(--fonte-titulo);
+        font-size: 1.6rem; /* menor do que 2rem */
+        margin-bottom: 20px;
+        animation: tituloRGB 2s linear infinite;
+        text-shadow: 0 0 10px #00C2FF, 0 0 20px #00C2FF;
+    }
+    
+}
+
+
+@keyframes bordaAlternada {
+    0%, 25% {
+        border-color: var(--maldi-roxo);
+        box-shadow: 0 0 30px var(--maldi-roxo), 0 0 60px var(--maldi-roxo);
+    }
+    50%, 75% {
+        border-color: var(--gojo-azul);
+        box-shadow: 0 0 30px var(--gojo-azul), 0 0 60px var(--gojo-azul);
+    }
+    100% {
+        border-color: var(--maldi-roxo);
+        box-shadow: 0 0 100px var(--maldi-roxo), 0 0 100px var(--maldi-roxo);
+    }
+}
+
+@keyframes brilhoBorda {
+    0% {
+        box-shadow: 0 0 100px transparent, 0 0 100px transparent;
+    }
+    100% {
+        box-shadow: 0 0 100px currentColor, 0 0 100px currentColor;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@600&family=Rajdhani:wght@500&family=Cinzel+Decorative:wght@700&family=Monoton&display=swap');
+
+.caixa-principal h1 {
+    font-family: 'Cinzel Decorative', cursive; /* ou 'Monoton' para estilo neon */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    animation: tituloRGBBrilhante 6s ease-in-out infinite;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+@keyframes tituloRGBBrilhante {
+    0% {
+        color: #9B0F1D;
+        text-shadow: 0 0 12px #9B0F1D, 0 0 24px #9B0F1D;
+    }
+    50% {
+        color: #00C2FF;
+        text-shadow: 0 0 15px #00C2FF, 0 0 30px #00C2FF;
+    }
+    100% {
+        color: #9B0F1D;
+        text-shadow: 0 0 12px #9B0F1D, 0 0 24px #9B0F1D;
+    }
+}
+
+.caixa-perguntas {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px var(--texto-claro);
+}
+button {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 36px;
+    margin: 14px;
+    background-color: var(--sukuna-vermelho);
+    color: var(--texto-claro);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 14px var(--sukuna-vermelho);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.texto-resultado {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: var(--texto-claro);
+    text-shadow: 0 0 6px var(--texto-claro);
+}
